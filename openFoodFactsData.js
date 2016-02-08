@@ -34,10 +34,14 @@ function displayChart(typechart, datatype)
 	var url = "";
 	var data = "";
 
-	if (datatype == 'Countries where sold')
+	if (datatype == 'Countries of products')
 		url = "http://world.openfoodfacts.org/countries.json";
 	else if (datatype == 'Additives')
 		url = "http://world.openfoodfacts.org/additives.json";
+	else if (datatype == 'Traces')
+		url = "http://world.openfoodfacts.org/traces.json";
+	else if (datatype == 'Allergens')
+		url = "http://world.openfoodfacts.org/allergens.json";
 
 	getJSON(url).then(function(data) {
 		if (typechart == "pie")	

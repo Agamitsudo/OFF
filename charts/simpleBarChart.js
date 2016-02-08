@@ -20,8 +20,12 @@
             // Accessor functions   
             var barLabel = function (d) {
 		var id = d['id']; 
-	    	if (id.substr(0,3) == "en:")
-			id = id.substr(3);
+	    	if (id.substr(0,3) == "en:" ||
+		    id.substr(0,3) == "fr:" ||
+		    id.substr(0,3) == "de:" ||
+		    id.substr(0,3) == "es:" ||
+		    id.substr(0,3) == "nl:") 
+			{ id = id.substr(3); }
 		return id[0].toUpperCase() + id.substr(1);
  	    };  
             var barValue = function (d) { return parseFloat(d['products']); };  
