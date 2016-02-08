@@ -36,8 +36,10 @@ function displayChart(typechart, datatype)
 
 	if (datatype == 'Countries where sold')
 		url = "http://world.openfoodfacts.org/countries.json";
+	else if (datatype == 'Additives')
+		url = "http://world.openfoodfacts.org/additives.json";
 
-	getJSON("http://world.openfoodfacts.org/countries.json").then(function(data) {
+	getJSON(url).then(function(data) {
 		if (typechart == "pie")	
 			pieChart(data.tags);
 		else if (typechart == "bar")	

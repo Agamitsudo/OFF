@@ -18,7 +18,12 @@
             var maxBarWidth = 700; // width of the bar with the max value  
   
             // Accessor functions   
-            var barLabel = function (d) { return d['name']; };  
+            var barLabel = function (d) {
+		var id = d['id']; 
+	    	if (id.substr(0,3) == "en:")
+			id = id.substr(3);
+		return id[0].toUpperCase() + id.substr(1);
+ 	    };  
             var barValue = function (d) { return parseFloat(d['products']); };  
   	    var barLink = function(d)  { return d['url']; };
 
