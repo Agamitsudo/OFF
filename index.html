@@ -7,7 +7,8 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="charts/pieChart.js"></script>
-	<script src="charts/simpleBarChart.js"></script>	
+	<script src="charts/simpleBarChart.js"></script>
+	<script src="charts/bubbleChart.js"></script>	
 	<script src="openFoodFactsData.js"></script>
 	<script>		
 	function openFoodFactsData()
@@ -44,8 +45,8 @@
   <tr height="500px">
 	<td valign=top><div id='cssmenu'>
 		<ul>
-		   <li><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>#DataViz</span></a></li>
-		   <li class='active has-sub'><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>Thematics</span></a>
+		   <li><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>#OFF</span></a></li>
+		   <li class='active has-sub'><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>#DataViz</span></a>
 		      <ul>
 			 <li class='has-sub'><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>Countries of products</span></a>
 			    <ul>
@@ -53,7 +54,6 @@
 			    </ul>
 			    <ul>
 			       <li><a href="javascript:void(0);" onclick="displayChart('bar', 'Countries of products');"'><span>Bar chart</span></a></li>
-			       <!-- <li class='last'><a href='#'><span>Sub Product</span></a></li> -->
 			    </ul>
 			 </li>
 			 <li class='has-sub'><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>Additives</span></a>
@@ -82,7 +82,12 @@
 			 </li>
 		      </ul>
 		   </li>
-		</ul>
+		   <li class='active has-sub'><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>Add/Update to #OFF</span></a>
+			<ul>
+			   <li class='has-sub'><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>Adding...</span></a>
+			 </li>
+		      </ul>
+		   </li>
 	</div></td>
 
 	<td align="center">

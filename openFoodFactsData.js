@@ -48,6 +48,8 @@ function displayChart(typechart, datatype)
 			pieChart(data.tags);
 		else if (typechart == "bar")	
 			simpleBarChart(data.tags);
+		else if (typechart == "bubble")	
+			bubbleChart(data.tags);
 	}, function(status) { //error detection....
 		alert("error");
 	});
