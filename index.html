@@ -8,8 +8,8 @@
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="charts/pieChart.js"></script>
 	<script src="charts/simpleBarChart.js"></script>
-	<script src="charts/bubbleChart.js"></script>	
 	<script src="openFoodFactsData.js"></script>
+	<script src="addProduct.js"></script>
 	<script>		
 	function openFoodFactsData()
 	{
@@ -82,9 +82,9 @@
 			 </li>
 		      </ul>
 		   </li>
-		   <li class='active has-sub'><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>Add/Update to #OFF</span></a>
+		   <li class='active has-sub'><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>Add/Update</span></a>
 			<ul>
-			   <li class='has-sub'><a href="javascript:void(0);" onclick="clearSection('chart');"'><span>Adding...</span></a>
+			   <li><a href="javascript:void(0);" onclick="addProduct('chart');"'><span>Adding #OFF product</span></a>
 			 </li>
 		      </ul>
 		   </li>
