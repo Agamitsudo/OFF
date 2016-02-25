@@ -5,7 +5,7 @@ function addProduct(section)
 {
 	 clearSection(section);
          $("#" + section).append("<div id='logging'><form>User name:<br><input type='text' id='z1'><br>User password:<br><input type='password' id='z2'></form></div><br><br>");
-         $("#" + section).append("<div id='data'><form>Bar code:<br><input type='text' id='z3'><br>Product name:<br><input type='text' id='z4'><br><input id='add' type='button' value='add product'></form></div><div id='result'></di");
+         $("#" + section).append("<div id='data'><form>Bar code:<br><input type='text' id='z3'><br>Product name:<br><input type='text' id='z4'><br><input id='add' type='button' value='add product'></form></div>");
 
           $('#logging').hide().fadeIn(500);
           $('#data').hide().fadeIn(1000);
