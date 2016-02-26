@@ -1,36 +1,5 @@
-//
-// getJSON
-//
-var getJSON = function(url) {
-  return new Promise(function(resolve, reject) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('get', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-      if (status == 200) {
-        resolve(xhr.response);
-      } else {
-        reject(status);
-      }
-    };
-    xhr.send();
-  });
-};
+function displayChart(typechart, datatype){
 
-//
-// clearSections
-//
-function clearSection(section)
-{
-	document.getElementById(section).innerHTML = "";
-}
-
-//
-// displayChart(chartype, datatype)
-//
-function displayChart(typechart, datatype)
-{
 	var url = "";
 	var data = "";
 
@@ -43,14 +12,17 @@ function displayChart(typechart, datatype)
 	else if (datatype == 'Allergens')
 		url = "http://world.openfoodfacts.org/allergens.json";
 
-	getJSON(url).then(function(data) {
+	$.getJSON((url), function(data) {
+	
 		if (typechart == "pie")	
 			pieChart(data.tags);
 		else if (typechart == "bar")	
 			simpleBarChart(data.tags);
 		else if (typechart == "bubble")	
 			bubbleChart(data.tags);
+
 	}, function(status) { //error detection....
 		alert("error");
 	});
+
 }
