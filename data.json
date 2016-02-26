@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "name": "Select a dataset",
+        "url": ""
+    },
+    {
+        "id": 1,
+        "name": "Countries of products",
+        "url": "http://world.openfoodfacts.org/countries.json"
+    },
+    {
+        "id": 2,
+        "name": "Additives",
+        "url": "http://world.openfoodfacts.org/additives.json"
+    },
+    {
+        "id": 3,
+        "name": "Traces",
+        "url": "http://world.openfoodfacts.org/traces.json"
+    },    
+    {
+        "id": 4,
+        "name": "Allergens",
+        "url": "http://world.openfoodfacts.org/allergens.json"
+    }
+]
